@@ -1,0 +1,36 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    transition: 0.4s;
+}
+
+.hero-section {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920');
+    background-size: cover;
+    background-position: center;
+}
+
+.skill-card {
+    background: #1e2130;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #0d6efd;
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
