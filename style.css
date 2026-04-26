@@ -1,0 +1,334 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600&display=swap');
+
+:root {
+    /* Soft Dark Professional Theme */
+    --bg-main: #0f172a;       /* Deep Slate background */
+    --bg-alt: #1e293b;        /* Slightly lighter slate for contrast */
+    --bg-card: #1f2937;       /* Dark card background */
+    
+    --primary: #6366f1;       /* Indigo Accent */
+    --secondary: #8b5cf6;     /* Purple Accent */
+    
+    --text-main: #f8fafc;     /* Crisp off-white for headings */
+    --text-muted: #94a3b8;    /* Soft gray for paragraphs */
+    --border-color: #334155;  /* Subtle dark border */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
+}
+
+section, header {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+footer {
+    scroll-snap-align: end;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* OVERRIDES FOR BOOTSTRAP TO SUPPORT DARK THEME */
+.text-white { color: var(--text-main) !important; }
+.bg-dark { background-color: var(--bg-card) !important; border-color: var(--border-color) !important;}
+.border-secondary { border-color: var(--border-color) !important; }
+.text-secondary { color: var(--primary) !important; }
+.text-muted { color: var(--text-muted) !important; }
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+.navbar-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-main) !important;
+}
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important;
+}
+.navbar-toggler i {
+    color: var(--text-main) !important;
+}
+
+/* Section Backgrounds - Soft Dark Theme */
+#home {
+    /* Full-screen background image with dark blue to purple gradient overlay */
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 27, 75, 0.75) 100%), 
+                url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#about { background-color: var(--bg-alt); }
+#skills {
+    background-color: var(--bg-main);
+    padding: 80px 0;
+}
+#projects { background-color: var(--bg-alt); }
+#contact { background-color: var(--bg-main); }
+
+/* Text Accents */
+.text-gradient {
+    background: linear-gradient(to right, var(--primary), var(--secondary)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: var(--primary) !important; /* Fallback */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px; 
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.hero-title {
+    font-size: 5rem; /* Larger heading */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes softFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Hero Image Card */
+.hero-img-card {
+    background-color: var(--bg-card);
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    border: 1px solid var(--border-color);
+    animation: softFloat 5s ease-in-out infinite; /* Continuous floating */
+}
+.hero-img {
+    border-radius: 12px;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn-custom {
+    padding: 12px 32px;
+    border-radius: 8px; /* Professional rounded */
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    transition: filter 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-custom:active {
+    transform: scale(0.98) !important;
+}
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white !important;
+}
+.btn-primary-custom:hover {
+    filter: brightness(1.15); /* Slight brightness on hover */
+    transform: translateY(-2px);
+}
+.btn-outline-custom {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--text-main) !important;
+}
+.btn-outline-custom:hover {
+    background-color: var(--primary);
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Dark Cards (About, Skills, Projects) */
+.glass, .skill-card, .project-card {
+    background-color: var(--bg-card) !important;
+    background: none !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+.glass:hover, .skill-card:hover, .project-card:hover {
+    transform: translateY(-4px) !important; /* Subtle lift */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+    border-color: var(--primary) !important; /* Subtle accent border */
+}
+
+#about { position: relative; z-index: 1; }
+.about-img-box {
+    border-radius: 16px;
+    padding: 10px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+/* Enhanced About Typography */
+.about-lead {
+    font-size: 1.25rem;
+    line-height: 1.9;
+}
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+/* Skill Specifics */
+.skill-card {
+    padding: 3rem 2rem !important;
+    height: 100%;
+}
+.skill-icon {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+/* Premium Skill Tags Layout */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.skill-tag {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--text-main);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.2s ease;
+}
+.skill-tag:hover {
+    background-color: var(--primary);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Project Specifics */
+.project-card {
+    overflow: hidden !important;
+}
+.project-img-wrapper {
+    overflow: hidden;
+}
+.project-img-wrapper img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.project-card .card-body {
+    padding: 2.5rem 2rem;
+}
+.badge-custom {
+    background-color: rgba(99, 102, 241, 0.15);
+    color: var(--primary);
+    font-weight: 600;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* Footer Links */
+.footer-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main) !important;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.footer-link-icon:hover {
+    background-color: var(--primary);
+    color: white !important;
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 991px) { .hero-title { font-size: 3.5rem; } }
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .about-img-box img { width: 100%; }
+}

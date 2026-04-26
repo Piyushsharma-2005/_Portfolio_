@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Sharma | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand text-white" href="#">PIYUSH<span class="text-gradient">.</span></a>
+            <button class="navbar-toggler border-0 shadow-none text-white glass" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2 text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Work</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn-custom btn-primary-custom d-inline-block"
+                            href="mailto:piyush7638@gmail.com">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="container hero-content">
+            <div class="row min-vh-100 align-items-center pt-5">
+                <!-- Text Content -->
+                <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0" id="hero-text-container">
+                    <h6 class="text-gradient fw-bold mb-3 text-uppercase" style="letter-spacing: 3px;">
+                        <span>Web Developer</span>
+                    </h6>
+                    <h1 class="hero-title text-white mb-4">Piyush <span class="text-gradient">Sharma</span></h1>
+                    <p class="lead text-muted mb-5 pe-lg-4">
+                        <span class="text-white fw-semibold">Web Developer • Designer • Creative Thinker</span><br><br>
+                        I specialize in creating responsive and dynamic websites. I aim to combine creativity and
+                        technology to build interactive user experiences with a modern touch.
+                    </p>
+                    <div class="d-flex gap-4 justify-content-center justify-content-lg-start flex-wrap">
+                        <a href="https://github.com/Piyushsharma-2005" target="_blank"
+                            class="btn-custom btn-primary-custom">GitHub Profile</a>
+                        <a href="#projects" class="btn-custom btn-outline-custom">View My Work</a>
+                    </div>
+                </div>
+                <!-- Image Content -->
+
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" style="min-height: 80vh; display: flex; align-items: center;">
+        <div class="container py-5 my-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 text-center">
+                    <div class="about-img-box d-inline-block">
+                        <img src="my.png" class="img-fluid rounded-4" alt="Piyush Sharma"
+                            style="max-height: 450px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7 ps-lg-5 mt-lg-5">
+                    <h2 class="display-5 fw-bold text-white mb-4">About <span class="text-gradient">Me</span></h2>
+                    <div class="glass p-5 rounded-4 mt-5">
+                        <p class="text-white fw-light mb-4 about-lead">I am a <span
+                                class="text-gradient fw-bold">20-year-old</span> developer currently in my 2nd year of
+                            Bachelor of Computer Applications (BCA).</p>
+                        <p class="text-muted mb-5 about-text">My journey in tech started with a
+                            curiosity about how websites work.
+                            Currently, I am building my foundation in frontend technologies and learning the logic of
+                            backend programming. I enjoy turning ideas into functional, beautiful web pages.</p>
+
+                        <div class="row g-4 mt-2 border-top border-secondary pt-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-dark p-3 rounded-circle text-secondary border border-secondary">
+                                        <i class="bi bi-person-badge fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="text-muted mb-1">Education</h6>
+                                        <p class="text-white mb-0 fw-bold">BCA (2nd Year)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-dark p-3 rounded-circle text-secondary border border-secondary">
+                                        <i class="bi bi-geo-alt fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="text-muted mb-1">Location</h6>
+                                        <p class="text-white mb-0 fw-bold">India</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 position-relative">
+        <div class="container py-5 my-5">
+            <h2 class="display-5 text-white fw-bold text-center mb-5">Technical <span
+                    class="text-gradient">Skills</span></h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="skill-card text-center">
+                        <i class="bi bi-code-slash skill-icon"></i>
+                        <h4 class="text-white fw-bold mb-4">Frontend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="skill-card text-center">
+                        <i class="bi bi-braces skill-icon"></i>
+                        <h4 class="text-white fw-bold mb-4">Programming</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="skill-card text-center">
+                        <i class="bi bi-journal-code skill-icon"></i>
+                        <h4 class="text-white fw-bold mb-4">Learning</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Backend Logic</span>
+                            <span class="skill-tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <h2 class="display-5 fw-bold mb-5 text-center text-white">Academic <span
+                    class="text-gradient">Projects</span></h2>
+            <div class="row g-5">
+
+                <!-- Project 1 -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800"
+                                alt="Restro Project">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge-custom d-inline-block mb-3">Web Design</span>
+                            <h3 class="text-white fw-bold mb-3">Restro Project</h3>
+                            <p class="text-muted mb-4">A restaurant website layout focused on UI design and mobile
+                                responsiveness. Built using HTML5 and CSS3 during my college lab sessions.</p>
+                            <a href="https://piyushsharma-2005.github.io/restro/" target="_blank"
+                                class="btn-custom btn-outline-custom">
+                                View Demo <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800"
+                                alt="Early Web Portfolio">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge-custom d-inline-block mb-3"
+                                style="color: var(--primary); border-color: var(--primary); background: rgba(78, 0, 255, 0.1);">Academic
+                                Work</span>
+                            <h3 class="text-white fw-bold mb-3">Early Web Portfolio</h3>
+                            <p class="text-muted mb-4">My initial exploration into web page structuring. This project
+                                was my first attempt at creating a personal profile using fundamental HTML and basic
+                                CSS.</p>
+                            <a href="https://piyushsharma-2005.github.io/first-portfolio/" target="_blank"
+                                class="btn-custom btn-outline-custom">
+                                View Site <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="py-5">
+        <div class="container text-center py-5">
+            <h2 class="display-6 fw-bold text-white mb-4">Get In <span class="text-gradient">Touch</span></h2>
+            <p class="text-muted mb-5 mx-auto" style="max-width: 500px;">Open to learning opportunities, academic
+                projects, and connecting with fellow developers.</p>
+
+            <div class="d-flex justify-content-center gap-4 mb-5">
+                <a href="https://www.linkedin.com/in/piyush-sharma-67a428272/" target="_blank" class="footer-link-icon">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/Piyushsharma-2005" target="_blank" class="footer-link-icon">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.instagram.com/mr_piyusxh/" target="_blank" class="footer-link-icon">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="mailto:piyush7638@gmail.com" class="footer-link-icon" title="Email Me">
+                    <i class="bi bi-envelope-at-fill"></i>
+                </a>
+                <a href="tel:9251260932" class="footer-link-icon" title="Call Me">
+                    <i class="bi bi-telephone-fill"></i>
+                </a>
+            </div>
+
+            <div class="border-top border-secondary pt-4 mt-4" style="--bs-border-opacity: .2;">
+                <p class="small text-muted mb-0">
+                    &copy; 2026 Piyush Sharma. Designed with passion & modern tech.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
