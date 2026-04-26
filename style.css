@@ -46,9 +46,27 @@ body {
     overflow-x: hidden;
 }
 
+/* Global Container Constraints for a compact, balanced layout */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px !important;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1024px !important; /* Tighter container for compact look */
+    }
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
+}
+.display-5 {
+    font-size: 2.2rem !important; /* Smaller section headings */
+}
+.display-6 {
+    font-size: 1.8rem !important;
 }
 
 /* OVERRIDES FOR BOOTSTRAP TO SUPPORT DARK THEME */
@@ -131,10 +149,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 .hero-title {
-    font-size: 5rem; /* Larger heading */
+    font-size: 3.5rem; /* Compact heading */
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-section p.lead {
+    font-size: 1.1rem; /* Smaller hero paragraph */
 }
 
 @keyframes softFloat {
@@ -192,6 +213,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Dark Cards (About, Skills, Projects) */
+.glass {
+    padding: 2rem !important; /* Tighter padding for about card */
+}
 .glass, .skill-card, .project-card {
     background-color: var(--bg-card) !important;
     background: none !important;
@@ -217,38 +241,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Enhanced About Typography */
 .about-lead {
-    font-size: 1.25rem;
-    line-height: 1.9;
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 .about-text {
-    font-size: 1.1rem;
-    line-height: 1.9;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Skill Specifics */
 .skill-card {
-    padding: 3rem 2rem !important;
+    padding: 2rem 1.5rem !important;
     height: 100%;
+    max-width: 300px; /* Reduced width for compact look */
+    margin: 0 auto;
+}
+.skill-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem !important;
 }
 .skill-icon {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 /* Premium Skill Tags Layout */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 .skill-tag {
     background-color: rgba(99, 102, 241, 0.1);
     color: var(--text-main);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1.05rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
     font-weight: 600;
     border: 1px solid rgba(99, 102, 241, 0.2);
     transition: all 0.2s ease;
@@ -263,25 +293,36 @@ h1, h2, h3, h4, h5, h6 {
 /* Project Specifics */
 .project-card {
     overflow: hidden !important;
+    max-width: 450px; /* Reduced width */
+    margin: 0 auto;
 }
 .project-img-wrapper {
     overflow: hidden;
 }
 .project-img-wrapper img {
     width: 100%;
-    height: 280px;
+    height: 200px; /* Compact image height */
     object-fit: cover;
 }
 .project-card .card-body {
-    padding: 2.5rem 2rem;
+    padding: 1.5rem; /* Reduced padding */
+}
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem !important;
+}
+.project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem !important;
 }
 .badge-custom {
     background-color: rgba(99, 102, 241, 0.15);
     color: var(--primary);
     font-weight: 600;
-    padding: 0.5em 1em;
+    padding: 0.3em 0.8em;
     border-radius: 6px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem !important;
 }
 
 /* Footer Links */
